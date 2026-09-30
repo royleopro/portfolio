@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Léo Roy — Portfolio</title>
+  <meta name="description" content="Portfolio de Léo Roy, Product Designer freelance spécialisé en logiciels métiers B2B.">
+  <meta property="og:title" content="Léo Roy — Portfolio">
+  <meta property="og:description" content="Product Designer freelance, logiciels métiers B2B.">
+  <meta property="og:url" content="https://portfolio.leoroy.fr">
+  <!-- Optionnel : image d'aperçu LinkedIn (1200×630) -->
+  <!-- <meta property="og:image" content="https://portfolio.leoroy.fr/og.png"> -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    /* ============ À MODIFIER ============
+       Colle ici uniquement l'URL "src" de chaque code d'embed Figma
+       (elle commence par https://embed.figma.com/...) */
+    const DECKS = {
+      fr: {
+        src: "https://embed.figma.com/slides/BaEvrZBF6lALnYY8vVe1Cm/PORTFOLIO---L%C3%89O-ROY---FR?node-id=1-228&embed-host=share",
+        title: "Léo Roy — Portfolio",
+        cta: "Réserver un appel"
+      },
+      en: {
+        src: "https://embed.figma.com/slides/XwFG5rP7gHcz70JyD39ycx/PORTFOLIO---L%C3%89O-ROY---EN?node-id=1-228&embed-host=share",
+        title: "Léo Roy — Portfolio",
+        cta: "Book a call"
+      }
+    };
+    const CALL_URL = "https://calendly.com/royleopro/30min";
+  </script>
+
+  <style>
+    :root {
+      --bg: #FAFBFC;
+      --bar: #FFFFFF;
+      --ink: #0A0E27;
+      --muted: #767B8E;
+      --line: #E4E6EB;
+      --accent: #10B981;
+      --bar-h: 56px;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0F111A;
+        --bar: #15171F;
+        --ink: #F5F6F9;
+        --muted: #9DA4B8;
+        --line: #282C39;
+        --accent: #6EE7B7;
+      }
+    }
+    *, *::before, *::after { box-sizing: inherit; margin: 0; }
+    html, body { height: 100%; }
+    body {
+      display: flex;
+      flex-direction: column;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      flex: 0 0 var(--bar-h);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 0 20px;
+      background: var(--bar);
+      border-bottom: 1px solid var(--line);
+    }
+    .name {
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      text-decoration: none;
+      margin-right: auto;
+    }
+
+    /* Switch de langue */
+    .lang {
+      position: relative;
+      display: inline-grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 3px;
+      border-radius: 999px;
+      background: var(--bg);
+      border: 1px solid var(--line);
+    }
+    .lang::before {
+      content: "";
+      position: absolute;
+      top: 3px; bottom: 3px; left: 3px;
+      width: calc(50% - 3px);
+      border-radius: 999px;
+      background: var(--bar);
+      box-shadow: 0 1px 2px rgba(10, 14, 39, 0.08);
+      transition: transform 200ms ease;
+    }
+    .lang[data-active="en"]::before { transform: translateX(100%); }
+    .lang button {
+      position: relative;
+      z-index: 1;
+      min-width: 44px;
+      height: 32px;
+      padding: 0 12px;
+      border: 0;
+      border-radius: 999px;
+      background: none;
+      font: inherit;
+      font-weight: 500;
+      color: var(--muted);
+      cursor: pointer;
+    }
+    .lang button[aria-pressed="true"] { color: var(--ink); }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      height: 38px;
+      padding: 0 16px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 500;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .cta:hover { filter: brightness(1.06); }
+
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    main { position: relative; flex: 1; min-height: 0; }
+    iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    iframe[hidden] { display: none; }
+
+    @media (max-width: 520px) {
+      header { padding: 0 12px; gap: 10px; }
+      .cta { padding: 0 12px; font-size: 14px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .lang::before { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="name" href="https://leoroy.fr">Léo Roy</a>
+
+    <div class="lang" role="group" aria-label="Langue / Language" data-active="fr">
+      <button type="button" data-lang="fr" aria-pressed="true" lang="fr">FR</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+    </div>
+
+    <a class="cta" id="cta" target="_blank" rel="noopener">Réserver un appel</a>
+  </header>
+
+  <main id="stage"></main>
+
+  <script>
+    const stage = document.getElementById("stage");
+    const switcher = document.querySelector(".lang");
+    const buttons = switcher.querySelectorAll("button");
+    const cta = document.getElementById("cta");
+    cta.href = CALL_URL;
+
+    const frames = {}; // chaque deck n'est chargé qu'une fois, puis gardé en mémoire
+
+    function pickInitialLang() {
+      const fromUrl = new URLSearchParams(location.search).get("lang");
+      if (fromUrl === "fr" || fromUrl === "en") return fromUrl;
+      return (navigator.language || "").toLowerCase().startsWith("fr") ? "fr" : "en";
+    }
+
+    function show(lang) {
+      if (!frames[lang]) {
+        const f = document.createElement("iframe");
+        f.src = DECKS[lang].src;
+        f.title = lang === "fr" ? "Portfolio (français)" : "Portfolio (English)";
+        f.allowFullscreen = true;
+        stage.appendChild(f);
+        frames[lang] = f;
+      }
+      Object.entries(frames).forEach(([k, f]) => { f.hidden = k !== lang; });
+
+      switcher.dataset.active = lang;
+      buttons.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+      document.documentElement.lang = lang;
+      document.title = DECKS[lang].title;
+      cta.textContent = DECKS[lang].cta;
+
+      const url = new URL(location.href);
+      url.searchParams.set("lang", lang);
+      history.replaceState(null, "", url);
+    }
+
+    buttons.forEach(b => b.addEventListener("click", () => show(b.dataset.lang)));
+    show(pickInitialLang());
+  </script>
+</body>
+</html>
